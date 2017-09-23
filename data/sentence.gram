@@ -1,0 +1,20 @@
+#JSGF V1.0;
+
+/**
+ * JSGF Grammar for Turtle example
+ */
+
+grammar sentence;
+
+public <move> = <train> | <command> | <question>;
+
+<train> = this is a <obj> end ;
+<command> = jerry <c1>;
+<question> = [do you know a <obj>] ;
+
+<c1> = <verb> a <obj> | <etc> ;
+
+<obj> =  ball | bottle | book | pen | glass ;
+<verb> = grab | touch | pick ;
+<etc> = move the <obj> to the <moveto> ;
+<moveto> = left | right ;
