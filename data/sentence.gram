@@ -6,15 +6,17 @@
 
 grammar sentence;
 
-public <move> = <train> | <command> | <question>;
+public <move> = <control> | [some] <a> | perfect |  <train> [end] | berry <a> | this <command> | do | merry | guy | move to left | [jerry] <command> | <question> | turn on | turn off ;
 
-<train> = this is a <obj> end ;
-<command> = jerry <c1>;
-<question> = [do you know a <obj>] ;
+<control> = This is how to <verb> <obj>;
 
-<c1> = <verb> a <obj> | <etc> ;
+<train> = this is a [<obj>]  ;
+<command> =  <verb> <obj> | <etc> ;
+<question> = do you know a <obj> ;
 
-<obj> =  ball | bottle | book | pen | glass ;
+<obj> =  ball | glass | bottle | remote | eraser ;
 <verb> = grab | touch | pick ;
-<etc> = move the <obj> to the <moveto> ;
-<moveto> = left | right ;
+<etc> = [move the <obj> to the] [left | right] ;
+
+<a> =  it <b> | is that so [<b>] | we have met again ;
+<b> = dog | cat | fish | rat | rabbit | total | log | sock | look | bally ;

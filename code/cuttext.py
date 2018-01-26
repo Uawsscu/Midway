@@ -58,7 +58,6 @@ def get_object_question(text):
             # CAPTURE
             print word + " >>N"
             Detect(word, "question")
-
             break
     return word
 

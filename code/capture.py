@@ -26,4 +26,4 @@ def cap_ture(pathPic):
 
     cv2.destroyAllWindows()
 
-#cap_ture('messigray')
+cap_ture('messigray')

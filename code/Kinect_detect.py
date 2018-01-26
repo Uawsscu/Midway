@@ -16,7 +16,7 @@ def Detect(objectName,type):
     start = time.time()
     time.clock()
     elapsed = 0
-    seconds = 5  # 20 S.
+    seconds = 20  # 20 S.
     MIN_MATCH_COUNT = 30
     try :
         setpath = '/home/uawsscu/PycharmProjects/project3/image/' + objectName + '.jpg'
@@ -76,6 +76,7 @@ def Detect(objectName,type):
             time.sleep(2)
             print "..."
             break
+
         if goodCount != -1 and type == "question":
             espeak.synth("Yes, I know")
             time.sleep(1.5)

@@ -18,6 +18,7 @@ MODELDIR = "/home/uawsscu/PycharmProjects/project3/model"
 DATADIR = "/home/uawsscu/PycharmProjects/project3/data"
 
 config = Decoder.default_config()
+config.set_string('-logfn', '/dev/null')
 config.set_string('-hmm', path.join(MODELDIR, 'en-us/en-us'))
 config.set_string('-lm', path.join(MODELDIR, 'en-us/en-us.lm.bin'))
 config.set_string('-dict', path.join(MODELDIR, 'en-us/cmudict-en-us.dict'))
@@ -60,7 +61,6 @@ while True:
                             get_object_question(strDecode)
                 except AttributeError:
                     pass
-
                 decoder.start_utt()
     else:
         break
