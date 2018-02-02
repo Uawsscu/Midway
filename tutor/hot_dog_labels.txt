@@ -1,0 +1,4 @@
+hot dog
+neg
+not hot dog
+
