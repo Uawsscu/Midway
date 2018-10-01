@@ -15,9 +15,8 @@ while True:
         cv2.rectangle(img,(x,y),(x+w,y+h),(255,0,0),2)
         id,conf = rec.predict(gray[y:y+h,x:x+w])
         if id == 1:
-            id = "BIG"
-        if id == 2:
-            id = "lungTu"
+            id = "Tong"
+       
         cv2.putText(img,str(id),(x,y+h),font,3,(255,255,255),2,cv2.LINE_AA);
 
     cv2.imshow('frame',img)
